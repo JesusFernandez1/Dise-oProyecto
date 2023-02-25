@@ -85,7 +85,8 @@
         </div>
         <div class="col-sm">
           <div class="card w-100 card-border mb-5">
-            <a href="#malenia" data-toggle="modal"><img src="img/male.jpg" class="card-img-top" alt="Uno de los jefes mas dificiles, La espada de Miquella"></a>
+            <a href="#malenia" data-toggle="modal"><img src="img/male.jpg" class="card-img-top"
+                alt="Uno de los jefes mas dificiles, La espada de Miquella"></a>
             <div class="card-body">
               <p class="card-text">Malenia was born as a twin to Miquella, the most powerful of the Empyreans. She is
                 renowned for her legendary battle against Starscourge Radahn during the Shattering, during which she
@@ -140,7 +141,7 @@
           <div class="text-center"><span class="figura-name h5 p-2">Death</span></div>
         </div>
       </div>
-      
+
       <div class="row py-5">
         <div class="col text-center">
           <a href="#" class="link-dark">
@@ -152,24 +153,24 @@
   </div>
 
   <div class="video-container">
-  <video controls>
-    <source src="img/ELDEN RING - Official Gameplay Reveal.mp4" type="video/mp4">
-  </video>
-</div>
+    <video controls>
+      <source src="img/ELDEN RING - Official Gameplay Reveal.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <div id="footer" class="p-5">
     <div class="container w-50 pt-5">
       <div class="row row-cols-md-2 justify-content-md-center">
         <div class="col text-center">
           <a href="#">
-            <button class="btn btn-lg rounded-pill btn-warning w-100  p-3 shadow-sm font-weight-bold">Customer
+            <button class="btn btn-lg rounded-pill btn-secondary w-100  p-3 shadow-sm font-weight-bold">Customer
               Support</button>
           </a>
         </div>
       </div>
       <div class="container mt-3">
         <h2>Tabla de jefes principales</h2>
-        <table class="table">
+        <table class="table table-dark table-striped">
           <thead>
             <tr>
               <th>Nombre</th>
@@ -194,35 +195,35 @@
       </div>
       <div class="card">
         <div class="card-header">
-            Refistrate ahora!
-        </div>
-        <div class="card-body">
-            
-            <form>
-
-                <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre:</label>
-                  <input type="text"
-                    class="form-control" required name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre">
-                  <small id="helpId" class="form-text text-muted">Escribe el nombre</small>
-                </div>
-
-                <div class="mb-3">
-                  <label for="correo" class="form-label">Correo</label>
-                  <input type="email"
-                    class="form-control" required name="correo" id="correo" aria-describedby="helpId" placeholder="Correo">
-                  <small id="helpcorreo" class="form-text text-muted">Escribe el correo</small>
-                </div>
-
-                <div class="btn-group" role="group" aria-label="Button group name">
-                    <button type="submit" class="btn btn-success">Aceptar</button>
-                </div>
-
-            </form>
-
+          Refistrate ahora!
         </div>
         
-    </div>
+        <div class="card-body">
+
+          <form>
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" required name="nombre" id="nombre" aria-describedby="helpId"
+                placeholder="Nombre">
+              <small id="helpId" class="form-text text-muted">Escribe el nombre</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" class="form-control" required name="correo" id="correo" aria-describedby="helpId"
+                placeholder="Correo">
+              <small id="helpcorreo" class="form-text text-muted">Escribe el correo</small>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Button group name">
+              <button type="submit" class="btn btn-success">Aceptar</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -230,28 +231,30 @@
 
   <div id="malenia" class="modal fade">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">YouTube Video</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/D_iqjI2p7F4" allowfullscreen></iframe>
-              </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">YouTube Video</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315"
+              src="https://www.youtube.com/embed/D_iqjI2p7F4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function(){
-  $('#myButton').click(function(){
-    $(this).fadeOut('slow');
-  });
-});
+    $(document).ready(function () {
+      $('#myButton').click(function () {
+        $(this).fadeOut('slow');
+      });
+    });
   </script>
 </body>
+
 </html>
