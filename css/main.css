@@ -25,6 +25,7 @@ button,
 }
 
 .video-container {
+    background-color: black;
     position: relative;
     max-width: 100%;
     height: auto;
@@ -71,8 +72,9 @@ button,
 #boss {
     background: rgb(255, 255, 255);
     background: url(../img/fondo.jpg);
-    /*background-repeat: repeat-x;*/
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
     margin-top: -20px;
     margin-bottom: -30px;
 
@@ -115,9 +117,9 @@ button,
 
 #figuras {
     background: url(../img/Rey.jpg);
-    background-repeat: no-repeat, repeat;
-    background-position: bottom center, center center;
-    background-size: 100%, auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
 }
 
 .figura {
