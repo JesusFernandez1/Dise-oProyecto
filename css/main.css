@@ -1,67 +1,106 @@
-h1,h2,h3,h4,h5, button, .figura-name{
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+.figura-name {
     font-family: 'Bitter', serif;
 
 }
-#navbar{
+
+#navbar {
     z-index: 1;
 }
-#separator-ribbon{
+
+.mi-audio {
+    background-color: #504f4f;
+    /* Color de fondo gris */
+    color: #333;
+    /* Color de texto oscuro */
+    border-radius: 10px;
+    /* Borde redondeado */
+    padding: 10px;
+    /* Espacio interno */
+}
+
+.video-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+
+#separator-ribbon {
     width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
 }
-#separator-ribbon .content{
+
+#separator-ribbon .content {
     width: 150%;
     height: 150px;
     margin-left: -25%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
-#birthday{
+
+#birthday {
     background-color: rgb(219, 26, 26);
     position: relative;
     margin-top: -20px;
     z-index: 10;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
-#birthday img{
+#birthday img {
     position: relative;
     margin-top: -30px;
 }
 
-#boss{
-    background: rgb(255,255,255);
+#boss {
+    background: rgb(255, 255, 255);
     background: url(../img/fondo.jpg);
     /*background-repeat: repeat-x;*/
     background-size: 100%;
     margin-top: -20px;
     margin-bottom: -30px;
-    
+
 }
 
-.card-border{
+.card-border {
     border: solid 10px rgb(223, 166, 9);
     border-radius: 20px;
     overflow: hidden;
     transition: all ease-out 0.2s;
 }
-.card-border:hover{
+
+.card-border:hover {
     transform: scale(1.05);
 }
 
-.text-shadow{
-    text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+.text-shadow {
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
 }
-#separator-figuras{
+
+#separator-figuras {
     width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
 }
-#separator-figuras .content{
+
+#separator-figuras .content {
     width: 110%;
     height: 100px;
     margin-left: -5%;
@@ -69,27 +108,29 @@ h1,h2,h3,h4,h5, button, .figura-name{
     border-top-right-radius: 50%;
 }
 
-#separator-figuras-footer{
+#separator-figuras-footer {
     height: 20vw;
 }
 
 
-#figuras{
+#figuras {
     background: url(../img/Rey.jpg);
     background-repeat: no-repeat, repeat;
     background-position: bottom center, center center;
     background-size: 100%, auto;
 }
-.figura{
+
+.figura {
     cursor: pointer;
     transition: all ease-out 0.2s;
 }
-.figura:hover{
+
+.figura:hover {
     transform: scale(1.05);
 }
 
-.figura-name{
-    background-color: rgba(0,0,0,0.4);
+.figura-name {
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     display: inline-block;
     margin: 0 auto;
@@ -97,7 +138,7 @@ h1,h2,h3,h4,h5, button, .figura-name{
     border-radius: 15px;
 }
 
-#footer{
+#footer {
     background-color: rgb(104, 95, 81);
     background-size: 50px 50px;
 }
