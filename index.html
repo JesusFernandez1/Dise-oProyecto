@@ -136,9 +136,10 @@
         <h2 class="text-center text-secondary text-shadow h1">Featured Elden figures</h2>
       </div>
       <div class="row row-cols-1 row-cols-2 row-cols-sm-2 row-cols-md-4">
-        <div id="figura1" class="col-sm">
+        <div class="col-sm" onclick="mostrarMensaje()">
           <img src="img/figura2.png" alt="Figura de un guerrero" class="w-100 figura">
           <div class="text-center"><span class="figura-name h5 p-2">Warrior</span></div>
+          <div class="text-center" id="mensaje" style="display: none;"><span class="figura-name h5 p-2">No hay stock disponible</span></div>
         </div>
         <div id="figura2" class="col-sm">
           <img src="img/figura3.png" alt="Figura de un healer" class="w-100 figura">
@@ -298,9 +299,6 @@
       $('#myTable').DataTable();
     });
     $(document).ready(function () {
-      $('#figura1').click(function () {
-        $(this).fadeOut('slow');
-      });
       $('#figura2').click(function () {
         $(this).fadeOut('slow');
       });
@@ -324,6 +322,13 @@
         $(target).collapse('toggle');
       });
     });
+    function mostrarMensaje() {
+        var mensaje = document.getElementById("mensaje");
+        mensaje.style.display = "block";
+        setTimeout(function() {
+          mensaje.style.display = "none";
+        }, 3000);
+      }
   </script>
 </body>
 
