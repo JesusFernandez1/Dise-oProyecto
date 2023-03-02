@@ -8,7 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  
 </head>
 
 <body>
@@ -29,16 +35,22 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Boss</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mainSlider">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#boss">Boss</a></li>
+          <li class="nav-item"><a class="nav-link" href="#figuras">Figuras</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-toggle="collapse" data-target="#opcion1" aria-expanded="false"
+              aria-controls="opcion1">Musica</a>
+            <div class="collapse" id="opcion1">
+              <!-- Agrega aquí el contenido que deseas mostrar, como una etiqueta de audio -->
+              <audio class="mi-audio" autoplay loop controls>
+                <source src="img/musicaFondo.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </li>
           <li class="nav-item"><a class="nav-link text-muted" href="#">Exit</a></li>
         </ul>
       </div>
-
-      <audio class="mi-audio" autoplay loop controls>
-        <source src="img/musicaFondo.mp3" type="audio/mpeg">
-      </audio>
 
     </div>
   </nav>
@@ -50,7 +62,7 @@
         <img src="img/Portada.jpg" alt="Portada del juego Elden Ring" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="img/Renna.jpg" alt="Personaje de la historia Renna" class="d-block w-100">
+        <img src="img/Rey.jpg" alt="Personaje de la historia Renna" class="d-block w-100">
       </div>
       <div class="carousel-item">
         <img src="img/Malenia.jpg" alt="Personaje Malenia" class="d-block w-100">
@@ -121,7 +133,7 @@
   <div id="figuras">
     <div class="container">
       <div class="row">
-        <h2 class="text-center text-danger text-shadow h1">Featured Elden figures</h2>
+        <h2 class="text-center text-secondary text-shadow h1">Featured Elden figures</h2>
       </div>
       <div class="row row-cols-1 row-cols-2 row-cols-sm-2 row-cols-md-4">
         <div id="figura1" class="col-sm">
@@ -152,12 +164,6 @@
     </div>
   </div>
 
-  <div class="video-container">
-    <video controls>
-      <source src="img/ELDEN RING - Official Gameplay Reveal.mp4" type="video/mp4">
-    </video>
-  </div>
-
   <div id="footer" class="p-5">
     <div class="container w-50 pt-5">
       <div class="row row-cols-md-2 justify-content-md-center">
@@ -170,7 +176,7 @@
       </div>
       <div class="container mt-3">
         <h2>Tabla de jefes principales</h2>
-        <table class="table table-dark table-striped">
+        <table id="myTable" class="table table-dark table-striped">
           <thead>
             <tr>
               <th>Nombre</th>
@@ -193,39 +199,34 @@
           </tbody>
         </table>
       </div>
-      <div class="card">
-        <div class="card-header">
-          Refistrate ahora!
-        </div>
-        
-        <div class="card-body">
+      <div class="card-body">
 
-          <form>
+        <form>
 
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" required name="nombre" id="nombre" aria-describedby="helpId"
-                placeholder="Nombre">
-              <small id="helpId" class="form-text text-muted">Escribe el nombre</small>
-            </div>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" required name="nombre" v-model="cliente.nombre" id="nombre"
+              aria-describedby="helpId" placeholder="Nombre">
+            <small id="helpId" class="form-text text-muted">Escribe el nombre</small>
+          </div>
 
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo</label>
-              <input type="email" class="form-control" required name="correo" id="correo" aria-describedby="helpId"
-                placeholder="Correo">
-              <small id="helpcorreo" class="form-text text-muted">Escribe el correo</small>
-            </div>
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" required name="apellido" v-model="cliente.apellido" id="apellido"
+              aria-describedby="helpId" placeholder="Apellido">
+            <small id="helpId" class="form-text text-muted">Escribe el apellido</small>
+          </div>
 
-            <div class="btn-group" role="group" aria-label="Button group name">
-              <button type="submit" class="btn btn-success">Aceptar</button>
-            </div>
-
-          </form>
-
-        </div>
+        </form>
       </div>
     </div>
+    <div class="video-container">
+      <video controls poster="img/previa.jpg">
+        <source src="img/ELDEN RING - Official Gameplay Reveal.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
+</div>
 
   <!-- MOdals -->
 
@@ -250,8 +251,33 @@
   <script src="js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('#myButton').click(function () {
+      $('#myTable').DataTable();
+    });
+    $(document).ready(function () {
+      $('#figura1').click(function () {
         $(this).fadeOut('slow');
+      });
+      $('#figura2').click(function () {
+        $(this).fadeOut('slow');
+      });
+      $('#figura3').click(function () {
+        $(this).fadeOut('slow');
+      });
+      $('#figura4').click(function () {
+        $(this).fadeOut('slow');
+      });
+    });
+    $(function () {
+      // Agrega el evento click a todos los elementos con el atributo data-toggle="collapse"
+      $('[data-toggle="collapse"]').on('click', function (e) {
+        // Evita el comportamiento predeterminado del enlace
+        e.preventDefault();
+        // Obtiene el atributo data-target para saber qué elemento debe desplegarse
+        var target = $(this).data('target');
+        // Cambia el atributo aria-expanded del elemento para indicar si está desplegado o no
+        $(this).attr('aria-expanded', $(target).hasClass('show'));
+        // Agrega la funcionalidad de toggle para activar o desactivar el colapso del elemento
+        $(target).collapse('toggle');
       });
     });
   </script>

@@ -25,7 +25,6 @@ button,
 }
 
 .video-container {
-    background-color: black;
     position: relative;
     max-width: 100%;
     height: auto;
@@ -36,7 +35,7 @@ button,
   }
   
   .video-container video {
-    width: 100%;
+    width: 75%;
     height: auto;
   }
 
@@ -116,7 +115,7 @@ button,
 
 
 #figuras {
-    background: url(../img/Rey.jpg);
+    background: url(../img/fondo2.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -141,6 +140,6 @@ button,
 }
 
 #footer {
-    background-color: rgb(104, 95, 81);
+    background-color: rgb(22, 31, 44);
     background-size: 50px 50px;
 }
